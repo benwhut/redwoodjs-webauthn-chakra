@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/graphql/users.sdl.js"],
+  "sourcesContent": ["export const schema = gql`\n  type User {\n    id: Int!\n    name: String\n    email: String!\n    hashedPassword: String!\n    salt: String!\n    resetToken: String\n    resetTokenExpiresAt: DateTime\n    roles: String!\n    webAuthnChallenge: String\n  }\n\n  type Query {\n    users: [User!]! @requireAuth\n    user(id: Int!): User @requireAuth\n  }\n\n  input CreateUserInput {\n    name: String\n    email: String!\n    hashedPassword: String!\n    salt: String!\n    resetToken: String\n    resetTokenExpiresAt: DateTime\n    roles: String!\n    webAuthnChallenge: String\n  }\n\n  input UpdateUserInput {\n    name: String\n    email: String\n    hashedPassword: String\n    salt: String\n    resetToken: String\n    resetTokenExpiresAt: DateTime\n    roles: String\n    webAuthnChallenge: String\n  }\n\n  type Mutation {\n    createUser(input: CreateUserInput!): User! @requireAuth\n    updateUser(id: Int!, input: UpdateUserInput!): User! @requireAuth\n    deleteUser(id: Int!): User! @requireAuth\n  }\n`\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;yBAAsBA;AAAf,MAAMC,SAASD,mBAAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "names": ["gql", "schema"]
+}

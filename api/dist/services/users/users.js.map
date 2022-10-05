@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/services/users/users.js"],
+  "sourcesContent": ["import { db } from 'src/lib/db'\n\nexport const users = () => {\n  return db.user.findMany()\n}\n\nexport const user = ({ id }) => {\n  return db.user.findUnique({\n    where: { id },\n  })\n}\n\nexport const createUser = ({ input }) => {\n  return db.user.create({\n    data: input,\n  })\n}\n\nexport const updateUser = ({ id, input }) => {\n  return db.user.update({\n    data: input,\n    where: { id },\n  })\n}\n\nexport const deleteUser = ({ id }) => {\n  return db.user.delete({\n    where: { id },\n  })\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;;;;;;;;;gBAAA;AAEO,MAAMA,QAAQ,MAAM;AACzB,SAAOC,aAAGC,KAAKC,SAAR;AACR;AAEM,MAAMD,OAAO,CAAC;EAAEE;AAAF,MAAW;AAC9B,SAAOH,aAAGC,KAAKG,WAAW;IACxBC,OAAO;MAAEF;IAAF;EADiB,CAAnB;AAGR;AAEM,MAAMG,aAAa,CAAC;EAAEC;AAAF,MAAc;AACvC,SAAOP,aAAGC,KAAKO,OAAO;IACpBC,MAAMF;EADc,CAAf;AAGR;AAEM,MAAMG,aAAa,CAAC;EAAEP;EAAII;AAAN,MAAkB;AAC3C,SAAOP,aAAGC,KAAKU,OAAO;IACpBF,MAAMF;IACNF,OAAO;MAAEF;IAAF;EAFa,CAAf;AAIR;AAEM,MAAMS,aAAa,CAAC;EAAET;AAAF,MAAW;AACpC,SAAOH,aAAGC,KAAKY,OAAO;IACpBR,OAAO;MAAEF;IAAF;EADa,CAAf;AAGR;",
+  "names": ["users", "db", "user", "findMany", "id", "findUnique", "where", "createUser", "input", "create", "data", "updateUser", "update", "deleteUser", "delete"]
+}
