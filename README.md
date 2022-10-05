@@ -2,7 +2,7 @@
 
 RedwoodJS boilerplate with authentication setup using Chakra UI and Nodemailer (for password recovery).
 
-WebAuthn has been integrated but disabled due to the issue outlined [here](https://community.redwoodjs.com/t/dbauth-webauthn-stops-working-when-adding-user-scaffolding/4092)
+WebAuthn (FaceID, TouchID) has been integrated but disabled due to the issue outlined [here](https://community.redwoodjs.com/t/dbauth-webauthn-stops-working-when-adding-user-scaffolding/4092).
 
 Re-enable it by uncommenting and commenting out the useState hooks in web/src/Pages/LoginPage/LoginPage.js
 
